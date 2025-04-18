@@ -6,7 +6,7 @@ import os
 
 # Use Groq LLM (Mixtral) and fetch API key from Render env variable
 llm = ChatGroq(
-    model_name="mixtral-8x7b-32768",
+    model_name="llama3-70b-8192",
     temperature=0.2,
     api_key=os.environ["GROQ_API_KEY"]
 )
