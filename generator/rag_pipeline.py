@@ -29,7 +29,8 @@ def get_fact_check_response(claim):
 
     # Run LLM pipeline
     full_prompt = prompt | llm
-    result = full_prompt.invoke({"claim": claim, "context": combined_context})
+    result = full_prompt.invoke({"claim": claim, "context": combined_context}).content
+
 
     # Extract VERDICT and EXPLANATION
     verdict = "UNCERTAIN"
